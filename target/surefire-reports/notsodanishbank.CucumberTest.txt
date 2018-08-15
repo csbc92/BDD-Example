@@ -1,4 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: notsodanishbank.CucumberTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.311 sec
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.45 sec <<< FAILURE!
+And my account has a new balance of 50(Scenario: Successful cash withdraw)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<150> but was:<50>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at notsodanishbank.StepDefinition.my_account_has_a_new_balance_of(StepDefinition.java:37)
+	at ✽.And my account has a new balance of 50(Deposit.feature:33)
+
+Scenario: Successful cash withdraw  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<150> but was:<50>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at notsodanishbank.StepDefinition.my_account_has_a_new_balance_of(StepDefinition.java:37)
+	at ✽.And my account has a new balance of 50(Deposit.feature:33)
+
