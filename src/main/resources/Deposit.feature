@@ -24,3 +24,10 @@ Feature: Cash deposit At an ATM. Customer can make a cash deposit using the ATM.
    When I make a deposit of 50 at an ATM
    Then the AtM displays a message that deposit was successful
    And my account has a new balance of 150
+
+ @tag2
+ Scenario: Successful cash withdraw
+   Given I have an account with a balance of 100
+   When I make a withdraw of 50 at an ATM
+   Then the ATM displays a message that withdraw was successful
+   And my account has a new balance of 50

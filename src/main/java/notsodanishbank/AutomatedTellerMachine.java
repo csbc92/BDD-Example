@@ -22,4 +22,12 @@ public class AutomatedTellerMachine {
 		
 		return responseObject;
 	}
+
+	public ResponseObject makeWithdraw(Account account, int content) {
+		account.withdraw(content);
+		
+		ResponseObject responseObject = new ResponseObject(0, "Withdraw successful");
+		
+		return responseObject;
+	}
 }

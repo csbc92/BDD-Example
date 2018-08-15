@@ -36,4 +36,16 @@ public class StepDefinition {
 	    // Write code here that turns the phrase above into concrete actions
 	    assertEquals(account.getBalance(), balance);
 	}
+	
+	@When("^I make a withdraw of (\\d+) at an ATM$")
+	public void i_make_a_withdraw_of_at_an_ATM(int amount) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		AutomatedTellerMachine atm = new AutomatedTellerMachine();
+	    response = atm.makeWithdraw(account, amount);
+	}
+
+	@Then("^the ATM displays a message that withdraw was successful$")
+	public void the_ATM_displays_a_message_that_withdraw_was_successful() throws Throwable {
+	    assertEquals(response.getResponseMessage(), "Withdraw successful");
+	}
 }
